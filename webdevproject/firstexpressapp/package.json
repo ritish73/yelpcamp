@@ -1,0 +1,14 @@
+{
+  "name": "firstexpressapp",
+  "version": "1.0.0",
+  "description": "for practice",
+  "main": "app2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ritish gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

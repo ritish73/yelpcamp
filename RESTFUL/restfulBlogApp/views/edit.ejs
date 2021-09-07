@@ -1,0 +1,23 @@
+<%- include("partials/header"); %>
+<div class="ui main text container segment">
+	
+	<!--  we cannot directly make a put request so do a post req and add this at the end of action attribute(url) :- ?_method=PUT .this is called method overriding , post is overrided by put request when js encounters this?-method , delete request also uses method overriding to make it work npm i  method-override -- save  -->
+	
+	<div class="ui huge header">Edit <%= blog.title %></div>
+	<form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT " method="POST"> 
+		<div class="field">
+			<label>Title</label>
+			<input type="text" name="blog[title]" placeholder="title" value= "<%= blog.title %>">
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="blog[image]" placeholder="image" value="<%= blog.image %> ">
+		</div>
+		<div class="field">
+			<label>Blog Input</label>
+			<textarea name="blog[body]" > <%= blog.body %> </textarea>
+		</div>
+		<input class="ui inverted big violet button" type="submit">
+	</form>
+</div>
+<%- include("partials/footer"); %>
